@@ -1,0 +1,12 @@
+version: "3"
+services:
+  monerod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "18081:18081"
+    volumes:
+      - /opt/monero:/opt/monero
+    stdin_open: true
+
