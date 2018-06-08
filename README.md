@@ -17,6 +17,10 @@ sudo docker run -it --name=monero-docker \
 -p 18081:18081 monerod
 ```
 
+## Setup using docker-compose
+
+`docker run -it monero-docker_rpc:latest`
+
 **Config file is read from**: `/opt/monero/monerod.conf`
 
 ## Storing of Data

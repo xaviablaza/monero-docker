@@ -7,6 +7,23 @@ services:
     ports:
       - "18081:18081"
     volumes:
-      - /opt/monero:/opt/monero
+      - /opt/monero/:/opt/monero
     stdin_open: true
+    command: bash -c "./monerod --config-file /opt/monero/monerod.conf"
+  rpc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    #    command: bash -c "./monero-wallet-rpc --testnet --rpc-bind-port 18081 --rpc-bind-ip 127.0.0.1 --rpc-login username:password --log-level 4 --wallet-file testnet-wallet --password 21belair"
+    volumes:
+      - /opt/monero/:/opt/monero
+  wallet-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    command: bash -c "./monero-wallet-cli --testnet --generate-new-wallet /opt/monero/testnet-wallet"
+    volumes:
+      - /opt/monero/:/opt/monero
 

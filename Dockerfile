@@ -12,5 +12,3 @@ RUN wget https://downloads.getmonero.org/linux64 -O monero.tar.bz2
 RUN tar -jvxf monero.tar.bz2 --strip-components=2
 
 VOLUME ["/opt/monero"]
-
-CMD ./monerod --config-file /opt/monero/monerod.conf
