@@ -13,6 +13,8 @@ RUN tar -jvxf monero.tar.bz2 --strip-components=2
 
 VOLUME ["/opt/monero"]
 COPY monerod.conf /opt/monero/monerod.conf
+EXPOSE 18080
+EXPOSE 18081
 EXPOSE 28080
 EXPOSE 28081
 
