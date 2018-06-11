@@ -5,9 +5,9 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "28080:28080"
       - "18081"
       - "18080:18080"
+      - "28080:28080"
       - "28081"
     volumes:
       - monerod:/opt/monero
@@ -20,7 +20,7 @@ services:
     ports:
       - "138.68.53.57:18081:18081"
     stdin_open: true
-    command: bash -c "./monero-wallet-rpc --testnet --daemon-host monerod --rpc-bind-ip 0.0.0.0 --rpc-bind-port 18081 --confirm-external-bind --rpc-login username:password --log-level 4 --wallet-file /opt/monero/testnet-wallet --password 21belair"
+    command: bash -c "./monero-wallet-rpc --testnet --daemon-host monerod --rpc-bind-port 18081 --confirm-external-bind --rpc-login username:password --log-level 4 --wallet-file /opt/monero/testnet-wallet --password 21belair"
     volumes:
       - monerod:/opt/monero
     links:
