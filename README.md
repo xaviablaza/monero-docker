@@ -47,3 +47,7 @@ and use `/opt/monero/data` as your data dir inside the `monerod.conf`
 #monerod.conf
 data-dir=/opt/monero/data
 ```
+
+### Sources
+
+https://stackoverflow.com/questions/38882654/docker-entrypoint-running-bash-script-gets-permission-denied#comment82232384_38882798
