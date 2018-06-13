@@ -52,3 +52,10 @@ data-dir=/opt/monero/data
 
 https://stackoverflow.com/questions/38882654/docker-entrypoint-running-bash-script-gets-permission-denied#comment82232384_38882798
 https://blog.turret.io/basic-supervisor-logging-with-docker/
+
+### Ports
+
+`18080` is mainnet p2p port
+`18081` is mainnet rpc port
+`28080` is testnet p2p port
+`28081` is testnet rpc port

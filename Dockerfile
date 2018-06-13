@@ -20,10 +20,7 @@ EXPOSE 18081
 EXPOSE 28080
 EXPOSE 28081
 
-COPY entry.sh /entry.sh
-
 RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-CMD /usr/bin/supervisord
 
-# CMD bash /entry.sh
+CMD /usr/bin/supervisord
